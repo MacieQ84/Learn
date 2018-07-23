@@ -3,9 +3,11 @@ package com.MacieQ;
 public class KlasaTestowa {
 
     public static void main(String[] args) {
-        //obiektyTablice();
-        buildingString();
 
+
+        buildingString();
+        System.out.println("");
+        obiektyTablice();
     }
 
     static void buildingString() {
@@ -44,6 +46,6 @@ public class KlasaTestowa {
 
         // modulo mniejszej przez większą = reszta*większa
         int b = 7 % 12;
-        System.out.println("\n" + b);
+        System.out.println("Modulo = " + b);
     }
 }
