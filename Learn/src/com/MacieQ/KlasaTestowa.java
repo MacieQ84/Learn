@@ -8,7 +8,15 @@ public class KlasaTestowa {
         buildingString();
         System.out.println("");
         obiektyTablice();
-
+        System.out.println("\n");
+        Car car = new Car.CarBuilder().setBrand("Citroen")
+                .setModel("C4")
+                .setColour("Biały")
+                .setEngine(1.6)
+                .setMileage(97000)
+                .carBuild();
+        System.out.println(car.toString());
+        System.out.println(" ");
 
     }
 

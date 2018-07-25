@@ -2,6 +2,7 @@ package com.MacieQ;
 
 
 public class ClassBuilder {
+
     public static void main(String[] args) {
 
         //wywołanie buildera
@@ -12,7 +13,7 @@ public class ClassBuilder {
                 .setMileage(93000)
                 .carBuild();
         System.out.println(car.toString());
-        System.out.println("");
+        System.out.println(" ");
     }
 }
 
