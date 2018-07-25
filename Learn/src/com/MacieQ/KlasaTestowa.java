@@ -8,6 +8,8 @@ public class KlasaTestowa {
         buildingString();
         System.out.println("");
         obiektyTablice();
+
+
     }
 
     static void buildingString() {
