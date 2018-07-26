@@ -9,6 +9,7 @@ public class KlasaTestowa {
         System.out.println("");
         obiektyTablice();
         System.out.println("\n");
+
         Car car = new Car.CarBuilder().setBrand("Citroen")
                 .setModel("C4")
                 .setColour("Biały")

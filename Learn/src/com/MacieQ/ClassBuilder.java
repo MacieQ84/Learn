@@ -5,7 +5,15 @@ public class ClassBuilder {
 
     public static void main(String[] args) {
 
-        //wywołanie buildera
+        Home home = new Home.HomeBuilder()
+                .setSize(64)
+                .setColour("red")
+                .setForRent(false)
+                .setRooms(3)
+                .homeBuild();
+        System.out.println(home.toString());
+
+        //wywołanie buildera Car
         Car car = new Car.CarBuilder().setBrand("Citroen")
                 .setModel("C4")
                 .setColour("Biały")
@@ -16,6 +24,75 @@ public class ClassBuilder {
         System.out.println(" ");
     }
 }
+
+class Home{
+    private double size;
+    private String colour;
+    private boolean forRent;
+    private int rooms;
+
+    private Home(double size, String colour, boolean forRent, int rooms){
+        this.size = size;
+        this.colour = colour;
+        this.forRent = forRent;
+        this.rooms = rooms;
+    }
+    public String toString(){
+        String rent;
+        if (forRent)
+            rent = "tak";
+        else rent = "nie";
+
+
+        return ("Mieszkanie wielości - " + size
+                + ", w kolorze - " + colour
+                + ", o liczbie pokoi: " + rooms
+                + ", do wynajęcia: " + rent + "\n");
+
+    }
+
+    public static class HomeBuilder{
+        private double size;
+        private String colour;
+        private boolean forRent;
+        private int rooms;
+
+        public HomeBuilder setSize(double size) {
+            this.size = size;
+            return this;
+        }
+
+        public HomeBuilder setColour(String colour) {
+            this.colour = colour;
+            return this;
+        }
+
+        public HomeBuilder setForRent(boolean forRent) {
+            this.forRent = forRent;
+            return this;
+        }
+
+        public HomeBuilder setRooms(int rooms) {
+            this.rooms = rooms;
+            return this;
+        }
+
+        public Home homeBuild(){
+            return new Home(size, colour, forRent, rooms);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 class Car {
 
@@ -31,8 +108,8 @@ class Car {
         this.colour = colour;
         this.engine = engine;
         this.mileage = mileage;
-
     }
+
     public String toString(){
         return ("Marka: " + brand + "\n" +
                 "Model: " + model + "\n" +
