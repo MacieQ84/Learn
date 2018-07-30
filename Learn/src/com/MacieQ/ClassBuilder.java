@@ -25,19 +25,20 @@ public class ClassBuilder {
     }
 }
 
-class Home{
+class Home {
     private double size;
     private String colour;
     private boolean forRent;
     private int rooms;
 
-    private Home(double size, String colour, boolean forRent, int rooms){
+    private Home(double size, String colour, boolean forRent, int rooms) {
         this.size = size;
         this.colour = colour;
         this.forRent = forRent;
         this.rooms = rooms;
     }
-    public String toString(){
+
+    public String toString() {
         String rent;
         if (forRent)
             rent = "tak";
@@ -48,10 +49,9 @@ class Home{
                 + ", w kolorze - " + colour
                 + ", o liczbie pokoi: " + rooms
                 + ", do wynajęcia: " + rent + "\n");
-
     }
 
-    public static class HomeBuilder{
+    public static class HomeBuilder {
         private double size;
         private String colour;
         private boolean forRent;
@@ -77,21 +77,11 @@ class Home{
             return this;
         }
 
-        public Home homeBuild(){
+        public Home homeBuild() {
             return new Home(size, colour, forRent, rooms);
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 class Car {
@@ -110,7 +100,7 @@ class Car {
         this.mileage = mileage;
     }
 
-    public String toString(){
+    public String toString() {
         return ("Marka: " + brand + "\n" +
                 "Model: " + model + "\n" +
                 "Kolor: " + colour + "\n" +
@@ -153,7 +143,8 @@ class Car {
             this.mileage = mileage;
             return this;
         }
-        public Car carBuild(){
+
+        public Car carBuild() {
             return new Car(brand, model, colour, engine, mileage);
         }
 
