@@ -16,7 +16,7 @@ public class EasySort {
             lista.add(scan.nextInt());
         }
         Collections.sort(lista);
-        Set uniqueLista = new HashSet(lista);
+        Set<Integer> uniqueLista = new HashSet<>(lista);
         System.out.println(lista); // sorted list
         System.out.println(uniqueLista); // sorted list, without dupllicates
     }
