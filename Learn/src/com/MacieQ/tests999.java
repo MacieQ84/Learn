@@ -1,6 +1,6 @@
 package com.MacieQ;
 
-public class KlasaTestowa {
+public class tests999 {
 
     public static void main(String[] args) {
 
@@ -52,7 +52,7 @@ public class KlasaTestowa {
         obiektInt[2] = 3;
         tablicaInt[2] = 2;
         int wielkoscTablicy = tablicaInt.length;
-        System.out.println(obiektObiekt + "\n" + obiektString + "\n" + obiektInt[1] + "\n" + tablicaInt[3] + "\n"
+        System.out.println(obiektObiekt + "\n" + obiektString + "\n" + obiektInt[2] + "\n" + tablicaInt[3] + "\n"
                 + wielkoscTablicy);
 
         // modulo mniejszej przez większą = reszta*większa
